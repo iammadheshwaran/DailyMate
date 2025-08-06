@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-blue-50 px-4 py-10 sm:px-6">
       {/* Main content area grows to push footer down */}
-      <main className="flex-grow w-full mt-20 max-w-xl mx-auto">
+      <main className="flex-grow w-full mt-15 max-w-xl mx-auto">
         <Home />
       </main>
 
