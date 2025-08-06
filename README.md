@@ -1,69 +1,51 @@
-# React + TypeScript + Vite
+# ⏱️ Dailymate – Time Tracking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and clean time tracker that helps you log daily activities and hours spent. Built with **React**, **TypeScript**, and **TailwindCSS**, it visualizes your productivity using responsive charts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+✅ Log activities with hours  
+✅ Visual chart display for time spent  
+✅ Responsive and mobile-friendly  
+✅ Clear "No activity" state UI  
+✅ Smooth UI transitions and layout control  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 What You'll Learn
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- State management using `useState`
+- Passing props between components
+- Conditional rendering (`data.length > 0`)
+- Chart integration with dynamic data
+- Styling and layout with **Tailwind CSS**
+- Folder structure for scalable apps
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Tech            | Purpose                                |
+|-----------------|----------------------------------------|
+| React + Vite    | Fast and modern frontend setup         |
+| TypeScript      | Type-safe components and logic         |
+| Tailwind CSS    | Utility-first CSS for rapid styling    |
+| React Icons     | Minimal, functional icons              |
+| Chart.js        | Data visualization (optional lib)      |
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📁 Folder Structure
+
+```txt
+src/
+├── components/
+│   └── ui/
+│       ├── TimeForm.tsx       # Form for user input
+│       └── TimeChart.tsx      # Chart to display time data
+├── pages/
+│   └── Home.tsx               # Main page
+├── App.tsx                    # App entry component
+└── main.tsx                   # Vite main entry point
